@@ -10,4 +10,13 @@
  */
 public class cuadrado {
     
+    private int lado;
+    cuadrado(int l) {
+        lado=l;
+    }
+    
+    public int getArea() {
+        return lado*lado;
+    }
+    
 }
