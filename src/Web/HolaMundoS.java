@@ -13,7 +13,7 @@ import javax.swing.*;
 public class HolaMundoS  extends JFrame {
     public HolaMundoS() {
         super("Hola Mundo");
-        JLabel label=new JLabel("Hola Mundo");
+        JLabel label=new JLabel("Hola Pepe");
         this.getContentPane().add(label);
         setSize(200,100);
         setLocationRelativeTo(null);
