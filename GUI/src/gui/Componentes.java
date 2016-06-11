@@ -37,7 +37,7 @@ public class Componentes {
             frame.add(jscrollbar);
             frame.setLayout(new GridLayout(0,1));
             frame.pack();
-            frame.setVisible(false);
+            frame.setVisible(true);
         } catch (Exception e) {}
         
         
