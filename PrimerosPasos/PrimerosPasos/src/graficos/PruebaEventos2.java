@@ -36,7 +36,7 @@ class MarcoBotones extends JFrame {
     }
 }
 
-class LaminaBotones extends JPanel{
+class LaminaBotones extends JPanel implements ActionListener{
     JButton botonAzul=new JButton("Azul");
     JButton botonAmarillo= new JButton("Amarillo");
     JButton botonRojo= new JButton("Rojo");
@@ -45,29 +45,25 @@ class LaminaBotones extends JPanel{
         add(botonAzul);
         add(botonAmarillo);
         add(botonRojo);
-        ColorFondo amarillo= new ColorFondo(Color.yellow);
-        ColorFondo Azul= new ColorFondo(Color.blue);
-        ColorFondo Rojo= new ColorFondo(Color.red);
         //El evento lo recibe "this" que es la clase actual y se pone a la escucha.
         botonAzul.addActionListener(this);
         botonAmarillo.addActionListener(this);
         botonRojo.addActionListener(this);
     }
-        class ColorFondo implements ActionListener{
-    
-    public ColorFondo(Color c) {
-        colorDeFondo=c;
-        
-    } 
-    
     public void actionPerformed(ActionEvent e) {
-        setBackground(colorDeFondo);
-    }
-    private Color colorDeFondo;
-}
-    }
-    
         
-    
+        Object botonPulsado=e.getSource();
+        
+        if(botonPulsado==botonAzul){
+            
+                    setBackground(Color.blue);
 
-
+            
+        } else if (botonPulsado==botonAmarillo) {
+            setBackground(Color.yellow);
+        } else {
+            setBackground(Color.red);
+        }
+        
+    }
+}
