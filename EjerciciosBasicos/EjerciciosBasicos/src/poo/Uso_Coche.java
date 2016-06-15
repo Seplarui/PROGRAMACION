@@ -13,10 +13,21 @@ public class Uso_Coche {
     
     public static void main(String[] args) {
         
-        Coche car= new Coche();
-        System.out.println("El coche tiene "+car.ruedas+" ruedas");
+       // Coche car= new Coche();
+
+
+        //System.out.println("El coche tiene "+car.ruedas+" ruedas");
         
-        System.out.println(car.largo);
+        
+       // System.out.println(car.getLargo());
+       
+       Coche micoche= new Coche();
+       
+       //micoche.setColor();
+       System.out.println(micoche.getColor());
+       
+       
+       
     
     }
     
