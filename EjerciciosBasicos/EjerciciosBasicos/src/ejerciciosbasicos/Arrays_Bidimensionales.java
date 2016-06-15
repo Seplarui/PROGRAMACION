@@ -36,7 +36,7 @@ public class Arrays_Bidimensionales {
         matrix[3][4]= 23 ;
         
         //System.out.println(matrix[1][1]);
-        int contador=0;
+        /*int contador=0;
         
         for (int i=0;i<4;i++)  {
             System.out.println();
@@ -45,7 +45,14 @@ public class Arrays_Bidimensionales {
                 contador++;
             }
         }
-        System.out.println("Contador: "+contador);
+        System.out.println("Contador: "+contador);*/
+        
+        for (int[]fila:matrix) {
+            System.out.println();
+            for (int z:fila){
+                System.out.println(z+" ");
+            }
+        }
     }
     
 }
