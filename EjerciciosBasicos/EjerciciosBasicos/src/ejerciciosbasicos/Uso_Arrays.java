@@ -17,7 +17,7 @@ public class Uso_Arrays {
         mi_matriz[3]=25;
         mi_matriz[4]=35;*/
 
-        int [] mi_matriz={5,33,-23,4,52};
+        int [] mi_matriz={5,33,-23,4,52,32,34,22,3443,543,56,756,564};
         
 
 
