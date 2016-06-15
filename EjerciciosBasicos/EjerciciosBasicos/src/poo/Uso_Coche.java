@@ -5,10 +5,6 @@
  */
 package poo;
 
-/**
- *
- * @author sepla
- */
 public class Uso_Coche {
     
     public static void main(String[] args) {
@@ -23,9 +19,14 @@ public class Uso_Coche {
        
        Coche micoche= new Coche();
        
-       //micoche.setColor();
-       System.out.println(micoche.getColor());
+       System.out.println(micoche.getDatosGenerales());
        
+       
+       //System.out.println(micoche.getColor());
+       
+       micoche.configura_asientos("no");
+       System.out.println(micoche.getAsientos());
+      
        
        
     
