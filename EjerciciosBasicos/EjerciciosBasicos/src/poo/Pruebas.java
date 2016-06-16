@@ -1,9 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package poo;
+import java.util.*;
 
 public class Pruebas {
 
@@ -16,40 +12,45 @@ public class Pruebas {
 
         trabajador1.setSeccion("RRHH");
 
-        System.out.println(trabajador1.getDatos());
-        System.out.println(trabajador2.getDatos());
-        System.out.println(trabajador3.getDatos());
-        System.out.println(trabajador4.getDatos());
+        System.out.println(trabajador1.getDatos() + "\n" + trabajador2.getDatos() + "\n"
+                + trabajador3.getDatos() + "\n" + trabajador4.getDatos());
+
+        System.out.println(Empleados.getIdSiguiente());
+        
+      
 
     }
 
-     static class Empleados {
-
-       
+    static class Empleados {
 
         public Empleados(String nom) {
 
             nombre = nom;
             seccion = "Administración";
-            Id=IdSiguiente;
+            Id = IdSiguiente;
             IdSiguiente++;
         }
 
         public void setSeccion(String seccion) { //SETTER
             this.seccion = seccion;
         }
-        
+
         public void setNombre(String nombre) { //SETTER
-            this.nombre=nombre;
+            this.nombre = nombre;
         }
 
         public String getDatos() {//GETTER
-            return "El nombre es: " + nombre + " y la sección es: " + seccion+ " y el ID: "+Id;
+            return "El nombre es: " + nombre + " y la sección es: " + seccion + " y el ID: " + Id;
         }
-         private  String nombre;
+
+        public static String getIdSiguiente() {
+            return "El IdSiguiente es: " + IdSiguiente;
+        }
+
+        private String nombre;
         private String seccion;
         private int Id;
-        private static int IdSiguiente=1;
+        private static int IdSiguiente = 1;
     }
 
 }
