@@ -11,24 +11,28 @@ public class Pruebas {
 
         Empleados trabajador1 = new Empleados("Perico");
         Empleados trabajador2 = new Empleados("Ana");
+        Empleados trabajador3 = new Empleados("Antonia");
+        Empleados trabajador4 = new Empleados("Mario");
 
         trabajador1.setSeccion("RRHH");
-        trabajador1.setNombre("Maria");
 
         System.out.println(trabajador1.getDatos());
         System.out.println(trabajador2.getDatos());
+        System.out.println(trabajador3.getDatos());
+        System.out.println(trabajador4.getDatos());
 
     }
 
      static class Empleados {
 
-        private  String nombre;
-        private String seccion;
+       
 
         public Empleados(String nom) {
 
             nombre = nom;
             seccion = "Administración";
+            Id=IdSiguiente;
+            IdSiguiente++;
         }
 
         public void setSeccion(String seccion) { //SETTER
@@ -39,9 +43,13 @@ public class Pruebas {
             this.nombre=nombre;
         }
 
-        public String getDatos() {
-            return "El nombre es: " + nombre + " y la sección es: " + seccion;
+        public String getDatos() {//GETTER
+            return "El nombre es: " + nombre + " y la sección es: " + seccion+ " y el ID: "+Id;
         }
+         private  String nombre;
+        private String seccion;
+        private int Id;
+        private static int IdSiguiente=1;
     }
 
 }
