@@ -22,14 +22,15 @@ public class Uso_Coche {
        System.out.println(micoche.getDatosGenerales());
        
        
-       //System.out.println(micoche.getColor());
+       System.out.println(micoche.getColor());
        
        micoche.configura_asientos("no");
        System.out.println(micoche.getAsientos());
-      
        
-       
-    
+       micoche.configura_climatizador("si");
+       System.out.println(micoche.dime_climatizador());
+       System.out.println(micoche.dime_peso_coche());
+       System.out.println("El precio final del coche es: "+micoche.precio_coche());
     }
     
 }
